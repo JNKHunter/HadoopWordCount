@@ -26,10 +26,11 @@ public class WordCount {
 
         @Override
         protected void map(Object key, Text value, Context context) throws IOException, InterruptedException {
-            StringTokenizer itr = new StringTokenizer(value.toString());
-            while(itr.hasMoreTokens()){
-                word.set(itr.nextToken());
-                context.write(word, one);
+
+            String[] words = value.toString().split("\\b");
+            for(int i = 0; i < words.length; i++){
+                word.set(words[i]);
+                context.write(word,one);
             }
         }
     }
