@@ -1,3 +1,3 @@
-tech/eats/art/WordCount$TokenizerMapper.class
 tech/eats/art/WordCount.class
-tech/eats/art/WordCount$IntSumReducer.class
+tech/eats/art/IntSumReducer.class
+tech/eats/art/TokenizerMapper.class
