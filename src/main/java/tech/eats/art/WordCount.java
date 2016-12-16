@@ -50,7 +50,7 @@ public class WordCount {
         job.setJarByClass(WordCount.class);
         job.setMapperClass(tech.eats.art.cluster.TokenizerMapper.class);
         job.setCombinerClass(tech.eats.art.cluster.IntSumReducer.class);
-        job.setReducerClass(IntSumReducer.class);
+        job.setReducerClass(tech.eats.art.cluster.IntSumReducer.class);
         job.setOutputKeyClass(tech.eats.art.cluster.IntSumReducer.class);
         job.setOutputValueClass(IntWritable.class);
 
